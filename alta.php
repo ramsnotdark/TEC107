@@ -1,4 +1,6 @@
-<?php include 'sesion.php'; ?>
+<?php include 'verificar_sesion.php';
+include 'conexion.php';
+?>
 
 <!doctype html>
 <html lang="en">
@@ -61,26 +63,8 @@
                         </div>
                         <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li><a href="altasalumnos.php">Registro de Alumnos <span
-                                            class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a>
-                                </li>
                                 <li><a href="consulta_usuarios.php">Consulta de Usuarios <span
                                             class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
-                                </li>
-                                <li><a href="#">Mensajes <span
-                                            class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Herramientas <span
-                                            class="caret"></span><span
-                                            class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
-                                    <ul class="dropdown-menu forAnimate" role="menu">
-                                        <li><a href="alta.php">Alta de Usuarios</a></li>
-                                        <li><a href="#">Otra acción</a></li>
-                                        <li><a href="#">Algo más</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separador</a></li>
-                                    </ul>
                                 </li>
                                 <li><a href="logout.php">Cerrar Sesión <span
                                             class="pull-right hidden-xs showopacity glyphicon glyphicon-log-out"></span></a>

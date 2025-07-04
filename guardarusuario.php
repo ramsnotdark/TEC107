@@ -16,7 +16,7 @@ if ($password !== $confirmar_password) {
 }
 
 // Verifica si el usuario o el email ya existen
-$stmt = $conexion->prepare("SELECT * FROM usuarios WHERE usuario = ? OR email = ?");
+$stmt = $conn->prepare("SELECT * FROM usuarios WHERE usuario = ? OR email = ?");
 $stmt->bind_param("ss", $usuario, $email);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 // Insertar nuevo usuario
-$stmt = $conexion->prepare("INSERT INTO usuarios (nombre, apellidos, usuario, email, password) VALUES (?, ?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO usuarios (nombre, apellidos, usuario, email, password) VALUES (?, ?, ?, ?, ?)");
 $stmt->bind_param("sssss", $nombre, $apellidos, $usuario, $email, $hashed_password);
 
 if ($stmt->execute()) {

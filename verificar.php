@@ -6,7 +6,7 @@ $usuario = $_POST['usuario'];
 $password = $_POST['password'];
 
 $sql = "SELECT * FROM usuarios WHERE usuario = ? OR email = ?";
-$stmt = $conexion->prepare($sql);
+$stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $usuario, $usuario);
 $stmt->execute();
 $resultado = $stmt->get_result();

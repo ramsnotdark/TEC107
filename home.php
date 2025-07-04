@@ -1,4 +1,4 @@
-<?php include 'sesion.php'; ?>
+<?include 'verificar_sesion.php'?>
 
 <!doctype html>
 <html lang="en">
@@ -52,7 +52,7 @@
                                 class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
                         <ul class="dropdown-menu forAnimate" role="menu">
                             <li><a href="alta.php">Alta de Usuarios</a></li>
-                            <li><a href="#">Another action</a></li>
+                            <li><a href="menu_lateral.php">MENU LATERAL</a></li>
                             <li><a href="#">Something else here</a></li>
                             <li class="divider"></li>
                             <li><a href="#">Separated link</a></li>

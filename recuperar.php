@@ -1,5 +1,4 @@
-<?php include 'sesion.php'; ?>
-
+<?include 'verificar_sesion.php'?>
 <?php
 include("conexion.php");
 
@@ -10,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $clave_hash = password_hash($nueva_clave, PASSWORD_DEFAULT);
 
     $sql = "UPDATE usuarios SET password=? WHERE usuario=? OR email=?";
-    $stmt = $conexion->prepare($sql);
+    $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", $clave_hash, $usuario, $usuario);
     $stmt->execute();
 

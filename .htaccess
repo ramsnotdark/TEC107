@@ -1,0 +1,10 @@
+# Redirigir a HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Evitar acceso a archivos sensibles
+<FilesMatch "\.(config\.php|env|sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

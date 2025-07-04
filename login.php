@@ -17,6 +17,11 @@
 </head>
 
 <body>
+    <?php
+    if (isset($_GET['mensaje'])) {
+    echo "<div class='alert alert-warning text-center'>" . htmlspecialchars($_GET['mensaje']) . "</div>";
+}
+?>
     <?php if (isset($_GET['error']) && $_GET['error'] == 1): ?>
     <div class="alert alert-danger alert-dismissible text-center" id="error-alert" role="alert" style="margin: 10px;">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
